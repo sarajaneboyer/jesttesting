@@ -9,7 +9,9 @@ import {
   allPositiveNumbers,
   someNumbersAreOdd,
   evensOnlyAndDoubleArray,
-  findItem
+  findItem,
+  sortArray,
+  doubleLikes
 } from '../app'
 
 
@@ -110,5 +112,12 @@ describe('findItem test 1', () => {
 describe('findItem test 2', () => {
   test('display not found error when an item does not exist', () => {
     expect(findItem([1,2,3,4],5)).toEqual('not found')
+  })
+})
+
+//testing doubleLikes
+describe('doubleLikes test', () => {
+  test('should double likes of each artist and print the hash', () => {
+    expect(doubleLikes([{name: 'a', likes:100},{name: 'b', likes:99},{name: 'c', likes:101}])).toEqual([{name: 'a', likes:200},{name: 'b', likes:198},{name: 'c', likes:202}])
   })
 })

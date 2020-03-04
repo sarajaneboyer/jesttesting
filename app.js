@@ -102,16 +102,27 @@ export const sortArray = (arr) => {
 
 let artists = [
   {name: 'a', likes:100},
-  {name: 'c', likes:99},
+  {name: 'b', likes:99},
   {name: 'c', likes:101}, 
 ]
 
 
 
 // doubles likes of artist
-doubleLikes(artists)
+//doubleLikes(artists)
 // => [
 //   {name: 'a', likes:200},
 //   {name: 'c', likes:198},
 //   {name: 'c', likes:202},  
 // ]; 
+
+export const doubleLikes = (arr) => {
+  function doubler(el){
+    var currentLikes = el.likes;
+    var newLikes = currentLikes*2;
+    el.likes = newLikes;
+    return el;
+  }
+  let newArray = arr.map(doubler);
+  return newArray;
+}
