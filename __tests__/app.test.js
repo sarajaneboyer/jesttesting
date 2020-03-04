@@ -11,7 +11,8 @@ import {
   evensOnlyAndDoubleArray,
   findItem,
   sortArray,
-  doubleLikes
+  doubleLikes,
+  moreThan100Likes
 } from '../app'
 
 
@@ -119,5 +120,12 @@ describe('findItem test 2', () => {
 describe('doubleLikes test', () => {
   test('should double likes of each artist and print the hash', () => {
     expect(doubleLikes([{name: 'a', likes:100},{name: 'b', likes:99},{name: 'c', likes:101}])).toEqual([{name: 'a', likes:200},{name: 'b', likes:198},{name: 'c', likes:202}])
+  })
+})
+
+//testing moreThan100Likes
+describe('moreThan100Likes test', () => {
+  test('should return an array of only the artists who have more than 100 likes', () => {
+    expect(moreThan100Likes([{name: 'a', likes:100},{name: 'b', likes:99},{name: 'c', likes:101}])).toEqual([{name: 'c', likes:101}])
   })
 })

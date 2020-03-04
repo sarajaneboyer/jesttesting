@@ -126,3 +126,14 @@ export const doubleLikes = (arr) => {
   let newArray = arr.map(doubler);
   return newArray;
 }
+
+// moreThan100Likes(artists)// =>[ {name: 'c', likes:101} ]; // use filter
+export const moreThan100Likes = (arr) => {
+  function over100Likes(el){
+    if (el.likes > 100) {
+      return el;
+    }
+  }
+  let newArray = arr.filter(over100Likes);
+  return newArray;
+}
