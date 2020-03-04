@@ -137,3 +137,20 @@ export const moreThan100Likes = (arr) => {
   let newArray = arr.filter(over100Likes);
   return newArray;
 }
+
+//  return an array of strings of artist name
+// justArtistMoreThan100Likes(artists) //=> ['c']; // use filter
+export const justArtistMoreThan100Likes = (arr) => {
+  function over100Likes(el) {
+    if (el.likes>100){
+      return el;
+    }
+  }
+    let newArray = arr.filter(over100Likes);
+    function onlyArtist(el){
+      var name = el.name;
+      return name;
+    } 
+   let newArtistArray = newArray.map(onlyArtist);
+   return newArtistArray
+  }
