@@ -179,4 +179,7 @@ export const findObjByName = (arr) => {
 
 // returns array of artist sorted by likes
 // sortArtistByName(artists)
+export const sortArtistByName = (arr) => {
+  
+}
 
