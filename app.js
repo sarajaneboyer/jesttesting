@@ -174,12 +174,25 @@ export const numberOfLikes = (arr) => {
 // find an item method. Returns 'not found' if not found
 // findObjByName(artists, 'a') // => {name: 'a', likes:200}
 export const findObjByName = (arr) => {
-
+  arr.find(item => item.name === name);
 }
 
 // returns array of artist sorted by likes
 // sortArtistByName(artists)
 export const sortArtistByName = (arr) => {
-  
+  return arr.sort((a, b) => {
+    return arr.sort((a,b) => {
+      return a.name < b.name ? -1 : a.name >b.name ? 1 , 0;
+    });
+  });
 }
 
+
+export default class myArray {
+  constructor(arr) {
+    this.array = arr;
+  }
+    toString() {
+      return this.arr.toString();
+    }
+}
