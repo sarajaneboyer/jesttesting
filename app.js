@@ -94,7 +94,7 @@ export const findItem = (arr, value) => {
 //sortArray(numberArray) //=> [4,3,2,1] *desc*
 export const sortArray = (arr) => {
   function whichIsLarger(el1,el2) {
-    return el1-el2
+    return el2-el1
   }
   return arr.sort(whichIsLarger)
 }
@@ -170,4 +170,13 @@ export const numberOfLikes = (arr) => {
   }
   return newArray.reduce(sumFunction)
 }
+
+// find an item method. Returns 'not found' if not found
+// findObjByName(artists, 'a') // => {name: 'a', likes:200}
+export const findObjByName = (arr) => {
+
+}
+
+// returns array of artist sorted by likes
+// sortArtistByName(artists)
 

@@ -14,7 +14,8 @@ import {
   doubleLikes,
   moreThan100Likes,
   justArtistMoreThan100Likes,
-  numberOfLikes
+  numberOfLikes,
+  findObjByName
 } from '../app'
 
 
@@ -115,6 +116,13 @@ describe('findItem test 1', () => {
 describe('findItem test 2', () => {
   test('display not found error when an item does not exist', () => {
     expect(findItem([1,2,3,4],5)).toEqual('not found')
+  })
+})
+
+//testing sortArray
+describe('sortArray test', () => {
+  test('should return an array sorted by number in descending order', () => {
+    expect(sortArray([1,2,3,4])).toEqual([4,3,2,1])
   })
 })
 
