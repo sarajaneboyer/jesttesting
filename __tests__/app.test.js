@@ -157,14 +157,14 @@ describe('numberOfLikes test', () => {
 })
 
 
-describe('myArray', () => {
-  beforeEach(() => {
-    const arr = new myArray([1,2,3]);
-  })
-  test('myArray to string', () => {
-    expect(arr.toString).toEqual('1,2,3');
-  })
-})
+// describe('myArray', () => {
+//   beforeEach(() => {
+//     const arr = new myArray([1,2,3]);
+//   })
+//   test('myArray to string', () => {
+//     expect(arr.toString).toEqual('1,2,3');
+//   })
+// })
 
 
 // [{name: 'a', likes:100},{name: 'b', likes:99},{name: 'c', likes:101}]
