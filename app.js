@@ -154,3 +154,20 @@ export const justArtistMoreThan100Likes = (arr) => {
    let newArtistArray = newArray.map(onlyArtist);
    return newArtistArray
   }
+
+  // get total number of likes fo all artists
+// numberOfLikes(artists) //=> 300; // get all likes
+export const numberOfLikes = (arr) => {
+  function justLikes(el) {
+    return el.likes;
+  }
+  function sumFunction(sum,value){
+    return sum + value;
+  }
+  let newArray = arr.map(justLikes);
+  function sumFunction(sum,value){
+    return sum + value
+  }
+  return newArray.reduce(sumFunction)
+}
+

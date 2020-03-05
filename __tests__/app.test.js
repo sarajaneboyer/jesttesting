@@ -13,7 +13,8 @@ import {
   sortArray,
   doubleLikes,
   moreThan100Likes,
-  justArtistMoreThan100Likes
+  justArtistMoreThan100Likes,
+  numberOfLikes
 } from '../app'
 
 
@@ -138,3 +139,15 @@ describe('justArtistMoreThan100Likes test', () => {
     expect(justArtistMoreThan100Likes([{name: 'a', likes:100},{name: 'b', likes:99},{name: 'c', likes:101}])).toEqual(['c'])
   })
 })
+
+
+//testing numberOfLikes
+describe('numberOfLikes test', () => {
+  test('should return the total number of likes for all artists', () => {
+    expect(numberOfLikes([{name: 'a', likes:100},{name: 'b', likes:99},{name: 'c', likes:101}])).toEqual(300)
+  })
+})
+
+
+
+// [{name: 'a', likes:100},{name: 'b', likes:99},{name: 'c', likes:101}]
